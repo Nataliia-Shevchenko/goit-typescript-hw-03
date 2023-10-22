@@ -28,13 +28,12 @@ class Employee {
 
 class Manager extends Employee {
   // Реалізуйте конструктор та збільшіть salary на 10000
-  constructor() {
-    super("manager", "supply", 10000);
-    this.salary += 10000;
+  constructor(name: string, department: string, salary: number) {
+    super(name, department, salary + 10000);
   }
 }
 
-const manager = new Manager();
+const manager = new Manager("Tom", "Supply", 10000);
 manager.getEmployeeDetails();
 
 export {};
